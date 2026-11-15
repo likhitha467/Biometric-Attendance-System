@@ -1,0 +1,51 @@
+<circuit version="1.1.0-SR2" rev="260312" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Push" CircId="Push-1" mainComp="false" Show_id="false" Show_Val="false" Pos="-104,-192" rotation="0" hflip="1" vflip="1" label="Push-1" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-100,-104" rotation="0" hflip="1" vflip="1" label="Push-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Resistor" CircId="Resistor-3" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-92,-20" rotation="0" hflip="1" vflip="1" label="Resistor-3" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-4" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-84,64" rotation="0" hflip="1" vflip="1" label="Resistor-4" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="220 Ω" />
+
+<item itemtype="Subcircuit" CircId="Uno-5" mainComp="false" Show_id="true" Show_Val="false" Pos="52,-168" rotation="0" hflip="1" vflip="1" label="Uno-5" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="biometric/biometric.ino.standard.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="-1" />
+</item>
+
+<item itemtype="Led" CircId="Led-6" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-200,-20" rotation="0" hflip="-1" vflip="1" label="Led-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Led" CircId="Led-7" mainComp="false" ShowProp="Color" Show_id="false" Show_Val="true" Pos="-188,64" rotation="0" hflip="-1" vflip="1" label="Led-7" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Red" Grounded="false" Threshold="1.8 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Node" CircId="Node-11" mainComp="false" Pos="-256,-104" />
+
+<item itemtype="Node" CircId="Node-12" mainComp="false" Pos="-256,-20" />
+
+<item itemtype="Node" CircId="Node-13" mainComp="false" Pos="-256,56" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Resistor-3-lPin" endpinid="Led-6-lPin" pointList="-108,-20,-184,-20" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Resistor-4-lPin" endpinid="Led-7-lPin" pointList="-100,64,-172,64" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Push-1-switch0pinN" endpinid="Uno-5-2" pointList="-88,-192,12,-192,12,-136,60,-136" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Push-2-switch0pinN" endpinid="Uno-5-3" pointList="-84,-104,32,-104,32,-128,60,-128" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Resistor-3-rPin" endpinid="Uno-5-8" pointList="-76,-20,20,-20,20,-80,60,-80" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Resistor-4-rPin" endpinid="Uno-5-9" pointList="-68,64,28,64,28,-72,60,-72" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Push-2-pinP0" endpinid="Node-11-1" pointList="-116,-104,-256,-104" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Push-1-pinP0" endpinid="Node-11-0" pointList="-120,-192,-256,-192,-256,-104" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="Led-6-rPin" endpinid="Node-12-1" pointList="-216,-20,-256,-20" />
+
+<item itemtype="Connector" uid="Connector-24" startpinid="Node-11-2" endpinid="Node-12-0" pointList="-256,-104,-256,-20" />
+
+<item itemtype="Connector" uid="Connector-26" startpinid="Led-7-rPin" endpinid="Node-13-1" pointList="-204,64,-256,64,-256,56" />
+
+<item itemtype="Connector" uid="Connector-27" startpinid="Node-12-2" endpinid="Node-13-0" pointList="-256,-20,-256,56" />
+
+<item itemtype="Connector" uid="Connector-28" startpinid="Node-13-2" endpinid="Uno-5-GND2" pointList="-256,56,-256,152,44,152,44,-32,60,-32" />
+
+</circuit>
